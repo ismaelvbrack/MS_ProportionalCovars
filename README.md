@@ -21,7 +21,7 @@ Denis Valle, Jeffrey Mintz, Ismael V. Brack
     -   `data/`: BBS and LULC processed data
     -   `GIS/`:
         -   `BBSrte*`: route centroids shapefiles
-        -   `nlcd_2013*`: 2013 LULC raster files 
+        -   `nlcd_2013*`: 2013 LULC raster. Large files not included in this repo, download from: [NLCD](https://www.mrlc.gov/data?f%5B0%5D=category%3Aland%20cover&f%5B1%5D=year%3A2013)
     -   `JAGS_models/`: 3 JAGS models: 1) full model; 2) without 1 covar; 3) without intercept
     -   `outputs/`: JAGS outputs with posterior samples
     -   `extract_LULC_BBSroutes.R`: extract LULC classes (grouped into 6) 
@@ -39,7 +39,7 @@ BBS data containing richness estimates of native birds for 2013 was obtained fro
 
 [![DOI:10.2737/RDS-2021-0001](https://img.shields.io/badge/DOI-10.2737%2FRDS--2021--0001-o?logo=doi&color=red&link=https%3A%2F%2Fdoi.org%2F10.2737%2FRDS-2021-0001)](https://doi.org/10.2737/RDS-2021-0001)
 
-\
+\\
 
 #### Land Use / Land Cover
 2013 LULC data was downloaded from the National Land Cover Database:

@@ -356,8 +356,10 @@ display: none;
 <h1>MS_ProportionalCovars</h1>
 <p>This repository contains data and code scripts for the manuscript
 “<em>Estimation and interpretation problems and solutions when using
-proportion covariates in linear regression models</em>”. We provide code
-for</p>
+proportion covariates in linear regression models</em>”. We provide a R
+tutorial to create conditional and marginal plots, code to simulate data
+with proportional covariates and analyze with different modelling
+approaches and code to run the BBS example.</p>
 <div id="authors" class="section level2">
 <h2>Authors</h2>
 <p>Denis Valle, Jeffrey Mintz, Ismael V. Brack</p>
@@ -384,26 +386,25 @@ AIC (rely on <code>useful functions.R</code>)</li>
 <li><p><code>BBS_example/</code>: code to run the example using North
 American Breeding Bird Surveys and National Land Cover Database</p>
 <ul>
-<li><p><code>data/</code>: BBS and LULC processed data</p></li>
-<li><p><code>GIS/</code>:</p>
+<li><code>data/</code>: BBS and LULC processed data</li>
+<li><code>GIS/</code>:
 <ul>
 <li><code>BBSrte*</code>: route centroids shapefiles</li>
-<li><code>nlcd_2013*</code>: 2013 LULC raster files</li>
+<li><code>nlcd_2013*</code>: 2013 LULC raster. Large files not included
+in this repo, download from: <a href="https://www.mrlc.gov/data?f%5B0%5D=category%3Aland%20cover&amp;f%5B1%5D=year%3A2013">NLCD</a></li>
 </ul></li>
-<li><p><code>JAGS_models/</code>: 3 JAGS models: 1) full model; 2)
-without 1 covar; 3) without intercept</p></li>
-<li><p><code>outputs/</code>: JAGS outputs with posterior
-samples</p></li>
-<li><p><code>extract_LULC_BBSroutes.R</code>: extract LULC classes
-(grouped into 6) within a buffer around each route centroid.</p></li>
-<li><p><code>filter_BBSdata.R</code>: filter BBS data for 2013 and
-exclude missing data</p></li>
-<li><p><code>run_model_bayes.R</code>: fit the 4 models using
-JAGS</p></li>
-<li><p><code>conditional_plots.R</code>: make predictions and create
-panel with conditional plots</p></li>
-<li><p><code>marginal_plots.R</code>: make predictions and create panel
-with marginal plots</p></li>
+<li><code>JAGS_models/</code>: 3 JAGS models: 1) full model; 2) without
+1 covar; 3) without intercept</li>
+<li><code>outputs/</code>: JAGS outputs with posterior samples</li>
+<li><code>extract_LULC_BBSroutes.R</code>: extract LULC classes (grouped
+into 6) within a buffer around each route centroid.</li>
+<li><code>filter_BBSdata.R</code>: filter BBS data for 2013 and exclude
+missing data</li>
+<li><code>run_model_bayes.R</code>: fit the 4 models using JAGS</li>
+<li><code>conditional_plots.R</code>: make predictions and create panel
+with conditional plots</li>
+<li><code>marginal_plots.R</code>: make predictions and create panel
+with marginal plots</li>
 </ul></li>
 <li><p><code>useful functions</code>: supporting functions</p></li>
 </ul>
@@ -415,8 +416,7 @@ with marginal plots</p></li>
 <p>BBS data containing richness estimates of native birds for 2013 was
 obtained from Forest Service Resaerch Data Archive:</p>
 <p><a href="https://doi.org/10.2737/RDS-2021-0001"><img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTk5IiBoZWlnaHQ9IjIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkRPSTogMTAuMjczNy9SRFMtMjAyMS0wMDAxIj48dGl0bGU+RE9JOiAxMC4yNzM3L1JEUy0yMDIxLTAwMDE8L3RpdGxlPjxhIHRhcmdldD0iX2JsYW5rIiB4bGluazpocmVmPSJodHRwczovL2RvaS5vcmcvMTAuMjczNy9SRFMtMjAyMS0wMDAxIj48bGluZWFyR3JhZGllbnQgaWQ9InMiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9InIiPjxyZWN0IHdpZHRoPSIxOTkiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjcikiPjxyZWN0IHdpZHRoPSI0OCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjQ4IiB3aWR0aD0iMTUxIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZTA1ZDQ0Ii8+PHJlY3Qgd2lkdGg9IjE5OSIgaGVpZ2h0PSIyMCIgZmlsbD0idXJsKCNzKSIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iVmVyZGFuYSxHZW5ldmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgdGV4dC1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgZm9udC1zaXplPSIxMTAiPjxpbWFnZSB4PSI1IiB5PSIzIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5Qm1hV3hzUFNJalJrRkNOekJESWlCeWIyeGxQU0pwYldjaUlIWnBaWGRDYjNnOUlqQWdNQ0F5TkNBeU5DSWdlRzFzYm5NOUltaDBkSEE2THk5M2QzY3Vkek11YjNKbkx6SXdNREF2YzNabklqNDhkR2wwYkdVK1JFOUpQQzkwYVhSc1pUNDhjR0YwYUNCa1BTSk5NalFnTVRKak1DQTJMall6TXkwMUxqTTJOeUF4TWkweE1pQXhNbE13SURFNExqWXpNeUF3SURFeUlEVXVNelkzSURBZ01USWdNSE14TWlBMUxqTTJOeUF4TWlBeE1scE5OeTQxT0RnZ05pNHdPVGQyTkM0ME56RmpMUzQyTmpNdExqa3lOUzB4TGpRd015MHhMak0zTXkweUxqUXdOaTB4TGpNM015MHlMakEwTmlBd0xUTXVNalEwSURFdU5EUXhMVE11TWpRMElETXVPRFEzSURBZ01pNHpOVGNnTVM0ek1qVWdNeTQ0TkRnZ015NHhOallnTXk0NE5EZ2dNUzR4TWlBd0lERXVPRGd0TGpRZ01pNDBORFV0TVM0ek1qVnNMUzR3TXprZ01TNHdOREpvTWk0d05EVldOaTR3T1RkYWJTMHhMamMyTXlBNExqazBNbU10TVM0eE1pQXdMVEV1T0RBeUxTNDNOaTB4TGpnd01pMHlMakEwTlNBd0xURXVNekkxTGpZNE1pMHlMakE0TlNBeExqZ3dNaTB5TGpBNE5TQXhMakE0TVNBd0lERXVPREF5TGpjMklERXVPREF5SURJdU1EZzFJREFnTVM0eU9EVXRMalkzTWlBeUxqQTBOUzB4TGpnd01pQXlMakEwTlZwdE1USXVNalV6TFRFdU9UUTRZekF0TWk0eE56SXRNUzQxTnpndE15NDNPRGt0TXk0NU1EWXRNeTQzT0RrdE1pNHpNamdnTUMwekxqazBOU0F4TGpZNU5TMHpMamswTlNBekxqYzRPU0F3SURJdU1UTXpJREV1TlRjNElETXVOemc1SURNdU9UUTFJRE11TnpnNUlESXVNamc1SURBZ015NDVNRFl0TVM0Mk5UWWdNeTQ1TURZdE15NDNPRGxhYlMweUxqQTVOQzB1TURGak1DQXhMakUwTFM0M01URWdNUzQ0T1MweExqZzFNU0F4TGpnNUxURXVNVE01SURBdE1TNDROVEV0TGpjMUxURXVPRFV4TFRFdU9Ea2dNQzB4TGpFek9TNDNNVEl0TVM0NE9TQXhMamcxTVMweExqZzVJREV1TVRRNUlEQWdNUzQ0TmpFdU56VXhJREV1T0RVeElERXVPRGxhYlRJdU5pMDFMamM1TldNd0lDNDJNek11TlRFM0lERXVNakkzSURFdU1UZzVJREV1TWpJM0xqWXpNeUF3SURFdU1UZzRMUzQxTlRVZ01TNHhPRGd0TVM0eU1qZGhNUzR4TnlBeExqRTNJREFnTUNBd0xURXVNVGc0TFRFdU1UZzVZeTB1TmpjeUlEQXRNUzR4TnprdU5UVTJMVEV1TVRnNUlERXVNVGc1V20wdU1UWTJJRGt1TXpReGFESXVNRFUxVmprdU5qQTBTREU0TGpjMVdpSXZQand2YzNablBnPT0iLz48dGV4dCBhcmlhLWhpZGRlbj0idHJ1ZSIgeD0iMzM1IiB5PSIxNTAiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB0ZXh0TGVuZ3RoPSIyMTAiPkRPSTwvdGV4dD48dGV4dCB4PSIzMzUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjIxMCI+RE9JPC90ZXh0Pjx0ZXh0IGFyaWEtaGlkZGVuPSJ0cnVlIiB4PSIxMjI1IiB5PSIxNTAiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB0ZXh0TGVuZ3RoPSIxNDEwIj4xMC4yNzM3L1JEUy0yMDIxLTAwMDE8L3RleHQ+PHRleHQgeD0iMTIyNSIgeT0iMTQwIiB0cmFuc2Zvcm09InNjYWxlKC4xKSIgZmlsbD0iI2ZmZiIgdGV4dExlbmd0aD0iMTQxMCI+MTAuMjczNy9SRFMtMjAyMS0wMDAxPC90ZXh0PjwvZz48L2E+PC9zdmc+" alt="DOI:10.2737/RDS-2021-0001" /></a></p>
-<p><br />
-</p>
+<p>\</p>
 </div>
 <div id="land-use-land-cover" class="section level4">
 <h4>Land Use / Land Cover</h4>

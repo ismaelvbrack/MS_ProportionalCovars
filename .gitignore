@@ -48,4 +48,4 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-BBS_example/GIS
+BBS_example/GIS/nlcd_2013*

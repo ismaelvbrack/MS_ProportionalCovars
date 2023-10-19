@@ -1,0 +1,1 @@
+nlcd* filter=lfs diff=lfs merge=lfs -text
