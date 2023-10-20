@@ -1,6 +1,6 @@
 # MS_ProportionalCovars
 
-This repository contains data and code scripts for the manuscript "*Estimation and interpretation problems and solutions when using proportion covariates in linear regression models*". We provide a R tutorial to create conditional and marginal plots, code to simulate data with proportional covariates and analyze with different modelling approaches and code to run the BBS example. 
+This repository contains data and code scripts for the manuscript "*Estimation and interpretation problems and solutions when using proportion covariates in linear regression models*". We provide an R tutorial to create conditional and marginal plots, code to simulate data with proportional covariates and analyze with different modelling approaches and code to run the BBS example. 
 
 ## Authors
 Denis Valle, Jeffrey Mintz, Ismael V. Brack
@@ -35,7 +35,7 @@ Denis Valle, Jeffrey Mintz, Ismael V. Brack
     
 ## Data bases
 #### BBS database
-BBS data containing richness estimates of native birds for 2013 was obtained from Forest Service Resaerch Data Archive:
+BBS data containing richness estimates of native birds for 2013 and routes centroids were obtained from Forest Service Resaerch Data Archive:
 
 [![DOI:10.2737/RDS-2021-0001](https://img.shields.io/badge/DOI-10.2737%2FRDS--2021--0001-o?logo=doi&color=red&link=https%3A%2F%2Fdoi.org%2F10.2737%2FRDS-2021-0001)](https://doi.org/10.2737/RDS-2021-0001)
 
