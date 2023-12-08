@@ -3,7 +3,7 @@ library(jagsUI)
 set.seed(1)
 
 
-dat1=read.csv(file.path("simul",'fake data.csv'))
+dat1=read.csv(file.path("simul",'fake_data.csv'))
 nobs=nrow(dat1)
 
 # MCMC settings 
@@ -24,7 +24,7 @@ inits=function(){
 }
 
 #run model
-mod=jags(model.file=file.path("simul","JAGS poisson regression.R"),
+mod=jags(model.file=file.path("simul","JAGS_poisson_regression.R"),
                parameters.to.save=params,inits=inits,
                data=list(nobs=nobs,
                          rich=dat1$rich,

@@ -33,4 +33,4 @@ dat1=data.frame(rich=rich,
                 y=runif(n))
 
 
-write.csv(dat1,file.path("simul",'fake data.csv'),row.names=F)
+write.csv(dat1,file.path("simul",'fake_data.csv'),row.names=F)

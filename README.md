@@ -7,15 +7,15 @@ Denis Valle, Jeffrey Mintz, Ismael V. Brack
 
 ## Repository content
 
--   `Appendix 2 code.R`: Tutorial for creating conditional 
+-   `Appendix_S2_code.R`: Tutorial for creating conditional 
     and marginal plots using `base R` and `ggplot` 
 
 -   `simul/`: code to simulate data and analyze under different GLM, GLMM and GAM models (MLE and Bayesian)
-    - `fake data.R`: simulate data
+    - `fake_data.R`: simulate data
     - `models.R`: run GLM, GLMM and GAM using maximum likelihood estimation
-    - `run JAGS poisson.R`: run Poisson GLM using JAGS model `JAGS poisson regression.R`
-    - `model selection AIC.R`: conduct model selection using AIC (rely on `useful functions.R`)
-    - `model selection BIC`: conduct model selection using BIC (rely on `useful functions.R`)
+    - `run_JAGS_poisson.R`: run Poisson GLM using JAGS model `JAGS_poisson_regression.R`
+    - `model_selection_AIC.R`: conduct model selection using AIC (rely on `useful_functions.R`)
+    - `model_selection_BIC`: conduct model selection using BIC (rely on `useful_functions.R`)
 
 -   `BBS_example/`: code to run the example using North American Breeding Bird Surveys and National Land Cover Database
     -   `data/`: BBS and LULC processed data
@@ -31,11 +31,11 @@ Denis Valle, Jeffrey Mintz, Ismael V. Brack
     -   `conditional_plots.R`: make predictions and create panel with conditional plots
     -   `marginal_plots.R`: make predictions and create panel with marginal plots
     
-- `useful functions`: supporting functions
+- `useful_functions`: supporting functions
     
 ## Data bases
 #### BBS database
-BBS data containing richness estimates of native birds for 2013 was obtained from Forest Service Resaerch Data Archive:
+BBS data containing richness estimates of native birds for 2013 was obtained from Forest Service Research Data Archive:
 
 [![DOI:10.2737/RDS-2021-0001](https://img.shields.io/badge/DOI-10.2737%2FRDS--2021--0001-o?logo=doi&color=red&link=https%3A%2F%2Fdoi.org%2F10.2737%2FRDS-2021-0001)](https://doi.org/10.2737/RDS-2021-0001)
 

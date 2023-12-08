@@ -3,7 +3,7 @@ library('gtools')
 library(meifly)
 set.seed(1)
 
-source('useful functions.R')
+source('useful_functions.R')
 
 #model selection using BIC
 nsim=1000
@@ -24,4 +24,4 @@ res1=data.frame(cov1=res[,2],
 res2=aggregate(denis~cov1+cov2,data=res1,sum); res2
 
 #export results
-write.csv(res2,'model selection BIC.csv',row.names=F)
+write.csv(res2,'model_selection_BIC.csv',row.names=F)
